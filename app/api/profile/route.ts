@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 import prisma from "../../../prisma/client";
 
 export async function GET() {
-  //get all posts
+  //get all profile
   const profile = await prisma.profile.findMany();
 
   //return response JSON

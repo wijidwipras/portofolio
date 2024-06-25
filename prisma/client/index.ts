@@ -2,7 +2,6 @@ const { PrismaClient } = require("@prisma/client");
 
 const prisma = new PrismaClient();
 
-// async function to create profile
 // async function createProfile() {
 //   try {
 //     const profile = await prisma.profile.create({
@@ -24,7 +23,26 @@ const prisma = new PrismaClient();
 //   }
 // }
 
-// // call the createProfile function
 // createProfile();
+
+// async function main() {
+//   try {
+//     const event = await prisma.education.create({
+//       data: {
+//         name: "Company Meeting",
+//         desc: "Quarterly financial review meeting",
+//         start: new Date("2024-07-01T09:00:00.000Z"),
+//         end: new Date("2024-07-01T11:00:00.000Z"),
+//       },
+//     });
+//     console.log("Event created:", event);
+//   } catch (error) {
+//     console.error("Error creating event:", error);
+//   } finally {
+//     await prisma.$disconnect();
+//   }
+// }
+
+// main();
 
 export default prisma;

@@ -25,3 +25,14 @@ model Profile {
   @@map("Profile")
 }
 
+model Education {
+  id        Int       @id @default(autoincrement())
+  createAt  DateTime  @default(now())
+  name      String    @db.VarChar(50)
+  desc      String
+  start     DateTime
+  end       DateTime
+
+  @@map("Education")
+}
+
