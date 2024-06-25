@@ -36,3 +36,12 @@ model Education {
   @@map("Education")
 }
 
+model Experience {
+  id        Int       @id @default(autoincrement())
+  createAt  DateTime  @default(now())
+  name      String
+  desc      String    @db.LongText
+  start     DateTime
+  end       DateTime
+  present   Boolean?   @default(false)
+}
