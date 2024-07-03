@@ -1,0 +1,12 @@
+-- CreateTable
+CREATE TABLE `Experience` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `createAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `name` VARCHAR(191) NOT NULL,
+    `desc` LONGTEXT NOT NULL,
+    `start` DATETIME(3) NOT NULL,
+    `end` DATETIME(3) NOT NULL,
+    `present` BOOLEAN NOT NULL DEFAULT false,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
