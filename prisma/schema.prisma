@@ -45,3 +45,10 @@ model Experience {
   end       DateTime
   present   Boolean?   @default(false)
 }
+
+model Skill {
+  id        Int       @id @default(autoincrement())
+  createAt  DateTime  @default(now())
+  name      String
+  category  String
+}
