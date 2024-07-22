@@ -12,6 +12,7 @@ datasource db {
 
 model Profile {
   id        Int       @id
+  photo     String
   name      String
   summary   String
   no_wa     String
