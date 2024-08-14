@@ -22,11 +22,12 @@ export async function GET() {
 }
 
 export async function PATCH(request: any) {
-  const id = 1;
+  const id = 0;
+
+  // await console.log(request.json())
 
   // get request data
-  const { name, summary, no_wa, email, address, linkedin, github, portofolio } =
-    await request.json();
+  const { name, summary, no_wa, email, address, linkedin, github, portofolio, photo } = await request.json();
 
   // update profile
   const profile = await prisma.profile.update({
@@ -42,6 +43,7 @@ export async function PATCH(request: any) {
       linkedin: linkedin,
       github: github,
       portofolio: portofolio,
+      photo: photo,
       updatedAt: new Date(),
     },
   });
