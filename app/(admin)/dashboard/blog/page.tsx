@@ -1,12 +1,50 @@
 import Link from "next/link";
 import { getAllPublishedBlog } from "@/lib/notion";
-import { Post } from "../../types/Notion";
+import { Post } from "@/app/types/Notion";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+
 
 export default async function Home() {
   const posts = await fetchBlogData();
 
+  console.log("posts", posts);
+
+  const tableHead = [
+    "Tanggal", "Judul", "Deskripsi",  "Penulis"
+  ]
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <Table>
+        <TableCaption>A list of blog.</TableCaption>
+        <TableHeader>
+          <TableRow>
+            {
+              tableHead.map((item, index) => (
+                <TableHead key={index}>{item}</TableHead>
+              ))
+            }
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            {/* <TableCell className="font-medium">INV001</TableCell>
+            <TableCell>Paid</TableCell>
+            <TableCell>Credit Card</TableCell>
+            <TableCell className="text-right">$250.00</TableCell> */}
+            
+          </TableRow>
+        </TableBody>
+      </Table>
+
       <div className="w-[672px] mx-auto">
         <h1 className="text-3xl font-bold mb-6">List Blog</h1>
 
@@ -25,7 +63,7 @@ export default async function Home() {
                 <h2 className="text-xl font-semibold mb-2">
                   <Link
                     className="text-blue-500 hover:underline"
-                    href={`/blog/${encodeURIComponent(post.slug)}`}
+                    href={`/dashboard/blog/${encodeURIComponent(post.slug)}`}
                   >
                     {post.title}
                   </Link>

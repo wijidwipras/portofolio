@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 
 import prisma from "../../../../prisma/client";
 
-export async function PATCH(request: any, { params }: any) {
+export async function PATCH(request: any, props: any) {
+  const params = await props.params;
   const id = parseInt(params.id);
 
   // get request data
@@ -29,7 +30,8 @@ export async function PATCH(request: any, { params }: any) {
   );
 }
 
-export async function DELETE(request: any, { params }: any) {
+export async function DELETE(request: any, props: any) {
+  const params = await props.params;
   const id = parseInt(params.id);
 
   await prisma.skill.delete({

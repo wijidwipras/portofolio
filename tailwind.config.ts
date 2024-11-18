@@ -56,6 +56,7 @@ const config = {
         primaryUser : "#ebf4ff",
         secondaryUser: "#f7e6fc",
         tertiaryUser: "#ffdd9e",
+        quadUser: "#fff3db",
         darkUser: "#212121"
       },
       borderRadius: {

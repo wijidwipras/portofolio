@@ -57,7 +57,7 @@ export default function Sidebar() {
   const nonActive = "bg-white text-black"
 
   return (
-    <div className='w-2/12 h-screen border border-slate-800 p-4'>
+    <div className='w-2/12 h-screen bg-zinc-50 p-4'>
       <Card className={cn('flex gap-2 items-center py-3 px-4 rounded-md text-2xl mb-2', fontSans.className)}>
         <Image
           src={Logo}

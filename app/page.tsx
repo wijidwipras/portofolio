@@ -1,10 +1,12 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Hello from '@/public/images/Hello.svg'
-import Photo from '@/public/images/photo.svg'
+import Photo from '@/public/images/Photo.svg'
 import Image from 'next/image'
-import { Sparkle } from 'lucide-react'
+import { Facebook, Github, Instagram, Linkedin, Sparkle, Twitter, Youtube } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { RiInstagramFill, RiYoutubeFill } from 'react-icons/ri'
+import Frontend from '@/public/images/FE.svg'
 
 export default function LandingPage() {
   return (
@@ -36,6 +38,90 @@ export default function LandingPage() {
           </div>
         </div>
         <div className='w-1/12 bg-secondaryUser'></div>
+      </div>
+      <div className='flex py-10 border-y-[3px] border-darkUser'>
+        <div className='w-1/12'></div>
+        <div className='w-10/12 flex justify-between items-center'>
+          <div className='flex items-center gap-2'>
+            <div className='p-2 rounded-full border-[3px] border-darkUser'>
+              <Facebook fill='darkUser' size={24} />
+            </div>
+            <span className='text-2xl'>Facebook</span>
+          </div>
+          <Sparkle fill='darkUser' size={16} />
+          <div className='flex items-center gap-2'>
+            <div className='p-2 rounded-full border-[3px] border-darkUser'>
+              <RiInstagramFill className='text-darkUser text-2xl' />
+            </div>
+            <span className='text-2xl'>Instagram</span>
+          </div>
+          <Sparkle fill='darkUser' size={16} />
+          <div className='flex items-center gap-2'>
+            <div className='p-2 rounded-full border-[3px] border-darkUser'>
+              <RiYoutubeFill className='text-darkUser text-2xl' />
+            </div>
+            <span className='text-2xl'>Youtube</span>
+          </div>
+          <Sparkle fill='darkUser' size={16} />
+          <div className='flex items-center gap-2'>
+            <div className='p-2 rounded-full border-[3px] border-darkUser'>
+              <Github fill='darkUser' size={24} />
+            </div>
+            <span className='text-2xl'>Github</span>
+          </div>
+          <Sparkle fill='darkUser' size={16} />
+          <div className='flex items-center gap-2'>
+            <div className='p-2 rounded-full border-[3px] border-darkUser'>
+              <Linkedin fill='darkUser' size={24} />
+            </div>
+            <span className='text-2xl'>LinkedIn</span>
+          </div>
+        </div>
+        <div className='w-1/12'></div>
+      </div>
+      <div className='bg-quadUser py-20'>
+        <div className='flex items-center justify-center gap-2'>
+          <Sparkle fill='darkUser' size={16} />
+            <span className='text-2xl'>Services</span>
+          <Sparkle fill='darkUser' size={16} />
+        </div>
+        <h2 className='text-5xl text-center mt-1'>My broad set of services</h2>
+        <p className='text-base text-center w-2/4 mx-auto mt-1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit aliquam et erat donec pulvinar enim potenti etiam at quis volutpat aliquet</p>
+        <div className='flex mt-10'>
+          <div className='w-1/12'></div>
+          <div className='w-10/12 rounded-t-3xl rounded-b-3xl border-t-[3px] border-b-[3px] border-x-[3px] border-darkUser bg-darkUser flex gap-1 justify-center flex-wrap py-[2px]'>
+            <div className='w-[33%] p-10 flex flex-col justify-center items-center bg-white rounded-tl-[20px]'>
+              <Image src={Frontend} width={120} alt="Logo" />
+              <h3 className='text-2xl'>Front-End Developer</h3>
+              <span className='text-center'>Lacus adipiscing lectus convallis purus aliquet cursus magnaol dolori montes augue donec cras.</span>
+            </div>
+            <div className='w-[33%] p-10 flex flex-col justify-center items-center bg-white'>
+              <Image src={Frontend} width={120} alt="Logo" />
+              <h3 className='text-2xl'>UI/UX design</h3>
+              <span className='text-center'>Lacus adipiscing lectus convallis purus aliquet cursus magnaol dolori montes augue donec cras.</span>
+            </div>
+            <div className='w-[33%] p-10 flex flex-col justify-center items-center bg-white rounded-tr-[20px]'>
+              <Image src={Frontend} width={120} alt="Logo" />
+              <h3 className='text-2xl'>Wordpress Developer</h3>
+              <span className='text-center'>Lacus adipiscing lectus convallis purus aliquet cursus magnaol dolori montes augue donec cras.</span>
+            </div>
+            <div className='w-[33%] p-10 flex flex-col justify-center items-center bg-white rounded-bl-[20px]'>
+              <Image src={Frontend} width={120} alt="Logo" />
+              <h3 className='text-2xl'>Designer</h3>
+              <span className='text-center'>Lacus adipiscing lectus convallis purus aliquet cursus magnaol dolori montes augue donec cras.</span>
+            </div>
+            <div className='w-[33%] p-10 flex flex-col justify-center items-center bg-white'>
+              <Image src={Frontend} width={120} alt="Logo" />
+              <h3 className='text-2xl'>Front-End Developer</h3>
+              <span className='text-center'>Lacus adipiscing lectus convallis purus aliquet cursus magnaol dolori montes augue donec cras.</span>
+            </div>
+            <div className='w-[33%] p-10 flex flex-col justify-center items-center bg-white rounded-br-[20px]'>
+              <h3 className='text-2xl'>Get in Touch</h3>
+              <span className='text-center'>Lacus adipiscing lectus convallis purus aliquet cursus magnaol dolori montes augue donec cras.</span>
+            </div>
+          </div>
+          <div className='w-1/12'></div>
+        </div>
       </div>
     </>
   )

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getAllPublishedBlog } from "@/lib/notion";
-import { Post } from "../types/Notion";
+import { Post } from "@/app/types/Notion";
 
 export default async function Home() {
   const posts = await fetchBlogData();
